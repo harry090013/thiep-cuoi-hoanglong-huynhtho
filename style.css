@@ -560,6 +560,10 @@ body {
   object-position: center bottom;
 }
 
+.gallery-quad-item:nth-child(4) .gallery-img {
+  object-position: center 35%;
+}
+
 /* 4. RECEPTION INFO SECTION */
 .reception-time-intro {
   font-family: var(--font-serif);
