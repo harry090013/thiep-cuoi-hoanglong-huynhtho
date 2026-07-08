@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  // --- 1. AMBIENT PARTICLES (囍) GENERATOR ---
+  // --- 1. AMBIENT PARTICLES (HEARTS) GENERATOR ---
   const ambientLayer = document.getElementById('ambient-layer');
-  const particleSymbols = ['囍', '囍', '囍']; // Multiple for weight
+  const particleSymbols = ['❤', '♥', '💕', '💖'];
   
   function createParticle() {
     if (!ambientLayer) return;
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     particle.style.animationDelay = `${delay}s`;
     particle.style.setProperty('--sway', `${sway}px`);
     
-    // Color variants
-    const colors = ['#f0d497', '#ffe8b5', '#ffc107', '#ff6b6b'];
+    // Red and pink heart color variants
+    const colors = ['#e02424', '#ff4d4d', '#ff7676', '#ff8e8e', '#ff3366'];
     particle.style.color = colors[Math.floor(Math.random() * colors.length)];
     
     ambientLayer.appendChild(particle);
