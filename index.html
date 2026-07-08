@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiệp Cưới Hoàng Long & Huỳnh Thơ | Chung Đôi</title>
+  <meta name="description" content="Kính mời quý khách đến dự lễ cưới của Hoàng Long & Huỳnh Thơ | Chủ Nhật, 19 tháng 7, 2026 | Nhà văn hóa thôn Vân Quật - Duy Nghĩa - TP. Đà Nẵng">
+  
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Thiệp Cưới Hoàng Long & Huỳnh Thơ">
+  <meta property="og:description" content="Kính mời quý khách đến dự lễ cưới của Hoàng Long & Huỳnh Thơ | Chủ Nhật, 19 tháng 7, 2026 | Nhà văn hóa thôn Vân Quật - Duy Nghĩa - TP. Đà Nẵng">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/uploads/hero.jpg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=Pattaya&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Music Player -->
+  <audio id="bg-music" loop>
+    <source src="images/wedding-music.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Floating Music Toggle Control -->
+  <div id="music-control" class="music-control hidden">
+    <div class="music-disc">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 1. ENVELOPE COVER (Landing Screen) -->
+  <div id="envelope-cover" class="envelope-cover">
+    <!-- Floating Ambience Elements (囍) -->
+    <div class="ambient-layer" id="ambient-layer"></div>
+    
+    <!-- Envelope Card Container -->
+    <div class="envelope-card-wrapper">
+      <!-- Golden Seal Button at top -->
+      <div class="seal-button">
+        <div class="seal-logo" style="background-image: url('images/themes/songlong-red/chinese_happiness.webp');"></div>
+      </div>
+      
+      <div class="envelope-card">
+        <!-- Dragon/Wave Decorative Backdrops -->
+        <div class="card-bg-decorations">
+          <img src="images/themes/songlong-red/dragon_left.webp" class="decor-dragon dragon-left" alt="">
+          <img src="images/themes/songlong-red/dragon_right.webp" class="decor-dragon dragon-right" alt="">
+          <img src="images/themes/songlong-red/cloud_small.webp" class="decor-cloud cloud-top-right" alt="">
+          <img src="images/themes/songlong-red/cloud_big.webp" class="decor-cloud cloud-bottom-left" alt="">
+          <img src="images/themes/songlong-red/wave.webp" class="decor-wave" alt="">
+        </div>
+        
+        <!-- Content on Card -->
+        <div class="envelope-content">
+          <h1 class="groom-bride-names-title">
+            <span class="name-block">Hoàng Long</span>
+            <span class="ampersand">&amp;</span>
+            <span class="name-block">Huỳnh Thơ</span>
+          </h1>
+          
+          <div class="divider-hearts">
+            <div class="divider-line"></div>
+            <span class="heart-symbol">❦</span>
+            <div class="divider-line"></div>
+          </div>
+          
+          <div class="wedding-date-envelope">19 tháng 7, 2026</div>
+          <div class="invitation-greeting">Thân Mời</div>
+          
+          <!-- Open button -->
+          <button id="open-btn" class="open-invitation-btn">
+            <span>Mở thiệp</span>
+            <div class="shine-effect"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN INVITATION CARD -->
+  <div id="main-invitation" class="main-invitation hidden-card">
+    
+    <!-- Top Gold Dragon Banner -->
+    <div class="top-dragon-banner"></div>
+    
+    <!-- Groom/Bride Round Profile Header -->
+    <div class="profiles-header-container">
+      <div class="profiles-header-flex">
+        <!-- Groom Circle -->
+        <div class="header-profile-card">
+          <div class="circle-frame">
+            <img src="images/uploads/groom.jpg" alt="Hoàng Long">
+          </div>
+          <span class="role-lbl">Trưởng Nam</span>
+          <h3 class="name-lbl">Hoàng Long</h3>
+        </div>
+        
+        <!-- Ribbon with Double Happiness in center -->
+        <div class="connecting-ribbon">
+          <span class="ribbon-囍">囍</span>
+        </div>
+        
+        <!-- Bride Circle -->
+        <div class="header-profile-card">
+          <div class="circle-frame">
+            <img src="images/uploads/bride.jpg" alt="Huỳnh Thơ">
+          </div>
+          <span class="role-lbl">Út Nữ</span>
+          <h3 class="name-lbl">Huỳnh Thơ</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Thông Tin Lễ Cưới -->
+    <div class="section-red-bar">THÔNG TIN LỄ CƯỚI</div>
+    <section class="section-content ceremony-info-section">
+      <!-- Parents list -->
+      <div class="parents-block-flex">
+        <div class="parents-card">
+          <span class="card-prefix">Ông Bà</span>
+          <h4 class="parent-name">Lê Xuân</h4>
+          <h4 class="parent-name">Trương Thị Mười</h4>
+          <p class="parent-addr">Văn Quật - Duy Nghĩa - TP Đà Nẵng</p>
+        </div>
+        <div class="vertical-split-line"></div>
+        <div class="parents-card">
+          <span class="card-prefix">Ông Bà</span>
+          <h4 class="parent-name">Huỳnh Quang Nhiên</h4>
+          <h4 class="parent-name">Đoàn Thị Bảy</h4>
+          <p class="parent-addr">An Tráng - Việt An - TP Đà Nẵng</p>
+        </div>
+      </div>
+      
+      <!-- Cursive / Elegant names block -->
+      <div class="names-elegant-announcement text-center">
+        <p class="announcement-intro">TRÂN TRỌNG BÁO TIN<br>LỄ THÀNH HÔN CỦA HAI CON CHÚNG TÔI</p>
+        
+        <h2 class="elegant-name">Lê Trương Hoàng Long</h2>
+        <span class="elegant-role">TRƯỞNG NAM</span>
+        
+        <div class="elegant-ampersand">&amp;</div>
+        
+        <h2 class="elegant-name">Huỳnh Thơ</h2>
+        <span class="elegant-role">ÚT NỮ</span>
+      </div>
+    </section>
+
+    <!-- Section: Album Ảnh Cưới -->
+    <div class="section-red-bar">ALBUM ẢNH CƯỚI</div>
+    <section class="section-content gallery-section">
+      <div class="gallery-quad-grid">
+        <div class="gallery-quad-item">
+          <img src="images/uploads/gallery1.jpg" alt="Wedding 1" class="gallery-img">
+        </div>
+        <div class="gallery-quad-item">
+          <img src="images/uploads/gallery2.jpg" alt="Wedding 2" class="gallery-img">
+        </div>
+        <div class="gallery-quad-item">
+          <img src="images/uploads/gallery3.jpg" alt="Wedding 3" class="gallery-img">
+        </div>
+        <div class="gallery-quad-item">
+          <img src="images/uploads/gallery4.jpg" alt="Wedding 4" class="gallery-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Thông Tin Tiệc Cưới -->
+    <div class="section-red-bar">THÔNG TIN TIỆC CƯỚI</div>
+    <section class="section-content reception-info-section text-center">
+      <p class="reception-time-intro">TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:</p>
+      <div class="reception-time-val">10:30</div>
+      
+      <!-- Date Block -->
+      <div class="date-block-container">
+        <div class="date-row">
+          <span class="date-part day-name">CHỦ NHẬT</span>
+          <span class="date-divider">|</span>
+          <span class="date-part day-num">19</span>
+          <span class="date-divider">|</span>
+          <span class="date-part month-name">THÁNG 07</span>
+        </div>
+        <div class="date-year">2026</div>
+        <div class="lunar-date">(Tức ngày 05/06 năm Bính Ngọ)</div>
+      </div>
+      
+      <!-- Countdown inline -->
+      <div class="countdown-inline-container">
+        <h4 class="countdown-heading">CÙNG ĐẾM NGƯỢC</h4>
+        <div id="countdown-inline-text" class="countdown-inline-text">00 ngày 00 giờ 00 phút 00 giây</div>
+      </div>
+      
+      <!-- Styled calendar -->
+      <div class="calendar-wrapper">
+        <div class="calendar-header">Tháng 7 / 2026</div>
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>T2</th>
+              <th>T3</th>
+              <th>T4</th>
+              <th>T5</th>
+              <th>T6</th>
+              <th>T7</th>
+              <th>CN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td class="highlight-wedding-day">19</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+              <td>30</td>
+              <td>31</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Lễ+Cưới+Hoàng+Long+%26+Huỳnh+Thơ&dates=20260719T103000/20260719T143000&details=Tiệc+cưới+Hoàng+Long+%26+Huỳnh+Thơ+tại+Nhà+văn+hóa+thôn+Vân+Quật&location=Nhà+văn+hóa+thôn+Vân+Quật+-+Duy+Nghĩa+-+TP.+Đà+Nẵng" target="_blank" rel="noopener noreferrer" class="add-calendar-link">
+        Thêm vào lịch
+      </a>
+    </section>
+
+    <!-- Section: Tiệc Cưới Sẽ Tổ Chức Tại -->
+    <div class="section-red-bar">TIỆC CƯỚI SẼ TỔ CHỨC TẠI</div>
+    <section class="section-content venue-section text-center">
+      <p class="venue-address-desc">Nhà văn hóa thôn Vân Quật - Duy Nghĩa - TP. Đà Nẵng</p>
+      
+      <!-- Interactive Map wrapper -->
+      <div class="map-iframe-container">
+        <!-- Interactive google map iframe pointing to the exact region -->
+        <iframe 
+          src="https://www.google.com/maps?cid=5018668918241625162&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=vi&output=embed" 
+          width="100%" 
+          height="320" 
+          style="border:0; border-radius: 8px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      
+      <!-- Timeline block -->
+      <div class="timeline-block text-left">
+        <h4 class="timeline-block-title text-center">LỊCH TRÌNH NGÀY CƯỚI</h4>
+        
+        <div class="styled-timeline-container">
+          <div class="timeline-line"></div>
+          
+          <div class="timeline-row">
+            <div class="timeline-time">09:00</div>
+            <div class="timeline-bullet"></div>
+            <div class="timeline-desc">
+              Hôn Lễ được cử hành tại<br>Tư gia Nam
+            </div>
+          </div>
+          
+          <div class="timeline-row">
+            <div class="timeline-time">10:30</div>
+            <div class="timeline-bullet"></div>
+            <div class="timeline-desc">
+              Tiệc chung vui cùng gia<br>đình
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="signature-footer">Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!</p>
+    </section>
+
+    <!-- Bottom Gold Dragon Banner -->
+    <div class="bottom-dragon-banner"></div>
+  </div>
+
+  <!-- Lightbox Modal for Gallery Grid -->
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+  </div>
+
+  <!-- Custom JS -->
+  <script src="app.js"></script>
+</body>
+</html>
